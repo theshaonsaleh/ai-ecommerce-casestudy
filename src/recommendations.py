@@ -392,7 +392,7 @@ def main():
         
         for j, item in enumerate(rec['recommendations'][:5], 1):
             print(f"  {j}. {item['product_name']}")
-            print(f"     Price: ${item['price']:.2f}")
+            print(f"     Price: £{item['price']:.2f}")
             print(f"     Score: {item['score']:.3f}")
             print(f"     Reason: {item['reason']}")
         print("-" * 60)

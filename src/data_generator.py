@@ -10,7 +10,7 @@ from faker import Faker
 import random
 import os
 
-fake = Faker()
+fake = Faker('en_GB')  # UK locale
 Faker.seed(42)
 random.seed(42)
 np.random.seed(42)
@@ -116,7 +116,8 @@ def generate_products(n=500):
                 if random.random() < 0.3:
                     name = f"{subcategory} ({material})"
                 
-                price = round(random.uniform(15, 500), 2)
+                # UK prices in GBP
+                price = round(random.uniform(12, 400), 2)
                 stock = random.randint(0, 200)
                 
                 # Create feature list
@@ -171,8 +172,8 @@ def generate_customers(n=1000):
             "last_name": last_name,
             "email": f"{first_name.lower()}.{last_name.lower()}{random.randint(1, 999)}@example.com",
             "signup_date": fake.date_between(start_date="-3y", end_date="today"),
-            "country": "US",
-            "state": fake.state_abbr(),
+            "country": "UK",
+            "postcode": fake.postcode(),
             "city": fake.city()
         })
     
@@ -328,8 +329,8 @@ def main():
     print(f"  Reviews: {len(reviews_df)}")
     print(f"  Categories: {len(CATEGORIES)}")
     print(f"  Date range: {orders_df['order_date'].min()} to {orders_df['order_date'].max()}")
-    print(f"  Total revenue: ${orders_df['total_price'].sum():,.2f} (fictional)")
-    print(f"  Avg order value: ${orders_df.groupby('order_id')['total_price'].sum().mean():,.2f}")
+    print(f"  Total revenue: £{orders_df['total_price'].sum():,.2f} (fictional)")
+    print(f"  Avg order value: £{orders_df.groupby('order_id')['total_price'].sum().mean():,.2f}")
     print(f"  Avg rating: {reviews_df['rating'].mean():.2f}/5.0")
     
     print("\n✓ All data saved to data/ directory")

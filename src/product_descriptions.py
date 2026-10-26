@@ -22,7 +22,7 @@ Product: {product['name']}
 Category: {product['category']} - {product['subcategory']}
 Material: {product['material']}
 Style: {product['style']}
-Price: ${product['price']}
+Price: £{product['price']}
 Features: {product['features']}
 
 Requirements:
@@ -197,7 +197,7 @@ def print_examples(results: list, n: int = 3):
         print(f"\nExample {i}:")
         print(f"Product: {result['name']}")
         print(f"Category: {result['category']} - {result['subcategory']}")
-        print(f"Price: ${result['price']}")
+        print(f"Price: £{result['price']}")
         print(f"Method: {result['method']}")
         print(f"Word Count: {result['word_count']}")
         print(f"\nDescription:")

@@ -2,7 +2,7 @@
 
 **Personal learning project, non-commercial, not affiliated with any business. All data is fictional.**
 
-This repository demonstrates how artificial intelligence can help online retail businesses through practical examples using completely fictional data. The project showcases AI applications in product content generation, customer sentiment analysis, personalized recommendations, and demand forecasting.
+This repository demonstrates how artificial intelligence can help online retail businesses through practical examples using completely fictional data. The project showcases AI applications in product content generation, customer sentiment analysis, personalised recommendations, and demand forecasting.
 
 ## 🎯 What's Inside
 
@@ -12,16 +12,16 @@ This repository demonstrates how artificial intelligence can help online retail 
 - **Synthetic Data**: Realistic fictional e-commerce data (products, orders, reviews, customers)
 - **Complete Testing**: Unit tests and data validation
 
-## 🏪 Fictional Business: Northwind Home Goods
+## 🏪 Fictional Business: Cotswold Home & Living
 
-All demonstrations use data from "Northwind Home Goods," a completely fictional online retailer specializing in home furnishings, decor, and kitchen supplies. The business, products, customers, and reviews are entirely synthetic and created for educational purposes only.
+All demonstrations use data from "Cotswold Home & Living," a completely fictional UK online retailer specialising in home furnishings, decor, and kitchen supplies. The business, products, customers, and reviews are entirely synthetic and created for educational purposes only.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
 - Python 3.9 or higher
-- (Optional) OpenAI API key for full functionality
+- (Optional) OpenAI API key for enhanced results
 
 ### Installation
 
@@ -49,9 +49,9 @@ cp .env.example .env
 python src/data_generator.py
 
 # This creates:
-# - data/products.csv (500 fictional products)
-# - data/customers.csv (1000 fictional customers)
-# - data/orders.csv (5000 fictional orders)
+# - data/products.csv (344 fictional products)
+# - data/customers.csv (1000 fictional UK customers)
+# - data/orders.csv (10,516 fictional orders)
 # - data/reviews.csv (2000 fictional reviews)
 ```
 
@@ -61,7 +61,7 @@ python src/data_generator.py
 # 1. Generate product descriptions
 python src/product_descriptions.py
 
-# 2. Analyze review sentiment
+# 2. Analyse review sentiment
 python src/sentiment_analysis.py
 
 # 3. Generate recommendations
@@ -79,7 +79,7 @@ All demos work **without an API key** using fallback methods. With an OpenAI API
 streamlit run dashboard/app.py
 ```
 
-The dashboard provides interactive visualizations for all AI use cases.
+The dashboard provides interactive visualisations for all AI use cases.
 
 ## 📊 What Each Demo Does
 
@@ -87,33 +87,33 @@ The dashboard provides interactive visualizations for all AI use cases.
 
 Automatically creates engaging, SEO-friendly product descriptions from basic product data.
 
-**Input**: Product name, category, features, materials
-**Output**: Professional description with bullet points
-**Fallback**: Template-based generation
+**Input**: Product name, category, features, materials  
+**Output**: Professional description with bullet points  
+**Fallback**: Template-based generation  
 
 ### 2. Review Sentiment Analysis
 
 Extracts sentiment scores and common themes from customer reviews.
 
-**Input**: Customer reviews per product
-**Output**: Sentiment breakdown, key themes, actionable insights
-**Fallback**: Simple keyword-based sentiment scoring
+**Input**: Customer reviews per product  
+**Output**: Sentiment breakdown, key themes, actionable insights  
+**Fallback**: Keyword-based sentiment scoring  
 
 ### 3. Recommendation Engine
 
-Suggests personalized product recommendations using multiple strategies.
+Suggests personalised product recommendations using multiple strategies.
 
-**Input**: Customer purchase history, product catalog
-**Output**: Top-N recommendations per customer
-**Methods**: Co-purchase patterns, embedding similarity, hybrid
+**Input**: Customer purchase history, product catalogue  
+**Output**: Top-N recommendations per customer  
+**Methods**: Co-purchase patterns, embedding similarity, hybrid  
 
 ### 4. Demand Forecasting
 
 Predicts future product demand based on historical sales patterns.
 
-**Input**: Historical order data (12+ months)
-**Output**: 30-day forecast with confidence intervals
-**Methods**: Time-series analysis, seasonal decomposition, moving averages
+**Input**: Historical order data (12+ months)  
+**Output**: 30-day forecast with confidence intervals  
+**Methods**: Time-series analysis, seasonal decomposition, moving averages  
 
 ## 🗂️ Project Structure
 
@@ -121,15 +121,11 @@ Predicts future product demand based on historical sales patterns.
 ai-ecommerce-casestudy/
 ├── CASE_STUDY.md              # Detailed case study write-up
 ├── README.md                   # This file
-├── LICENSE                     # MIT License
+├── LICENSE                     # MIT Licence
 ├── requirements.txt            # Python dependencies
 ├── .gitignore                  # Git ignore rules
 ├── .env.example                # Environment variables template
-├── data/                       # Generated fictional data (created by data_generator.py)
-│   ├── products.csv
-│   ├── customers.csv
-│   ├── orders.csv
-│   └── reviews.csv
+├── data/                       # Generated fictional data
 ├── src/                        # Source code
 │   ├── data_generator.py       # Synthetic data generation script
 │   ├── product_descriptions.py # LLM description generator
@@ -141,11 +137,7 @@ ai-ecommerce-casestudy/
 │   └── test_all.py
 ├── dashboard/                  # Streamlit dashboard
 │   └── app.py
-└── outputs/                    # Generated results (created when running demos)
-    ├── descriptions/
-    ├── sentiment/
-    ├── recommendations/
-    └── forecasts/
+└── outputs/                    # Generated results
 ```
 
 ## 🧪 Running Tests
@@ -162,14 +154,14 @@ Tests cover:
 
 ## 📈 Example Results
 
-Based on synthetic data evaluation:
+**Measured on synthetic data in offline mode** (template-based descriptions, keyword sentiment, TF-IDF recommendations):
 
-- **Product Descriptions**: 30x faster generation, 94% consistency score
-- **Sentiment Analysis**: 87% accuracy, automatic theme extraction
-- **Recommendations**: 14.7% click-through rate (vs. 2.1% random baseline)
-- **Demand Forecast**: 82% accuracy, 43% error reduction vs. naive baseline
+- **Product Descriptions**: 48.5 average word count, consistent structure
+- **Sentiment Analysis**: 55.3% positive, 26.7% negative, 18.0% neutral sentiment
+- **Recommendations**: 27.5% hit rate with TF-IDF similarity
+- **Demand Forecast**: 8.7% error reduction vs naive baseline (MAE: 0.83 units)
 
-> **Note**: All metrics are based on fictional data and are for demonstration purposes only.
+> **Note**: All metrics are based on fictional data and offline fallback methods. Results demonstrate capability with synthetic scenarios.
 
 ## 🔒 Privacy & Ethics
 
@@ -180,7 +172,7 @@ This project demonstrates responsible AI practices:
 - ✅ Bias mitigation considerations
 - ✅ Human-in-the-loop recommendations
 - ✅ Transparent AI decision-making
-- ✅ GDPR compliance considerations documented
+- ✅ UK GDPR and ICO compliance considerations documented
 
 See `CASE_STUDY.md` Section 6 for detailed ethical discussion.
 
@@ -198,26 +190,23 @@ This project demonstrates:
 ## 🛠️ Technology Stack
 
 - **Python 3.9+**: Core language
-- **OpenAI API**: GPT-4 for text generation, embeddings for similarity
+- **OpenAI API**: GPT-4 for text generation, embeddings for similarity (optional)
 - **Pandas**: Data manipulation and analysis
 - **Scikit-learn**: Machine learning baselines and utilities
 - **Streamlit**: Interactive dashboard
-- **Matplotlib/Plotly**: Data visualization
+- **Matplotlib/Plotly**: Data visualisation
 - **Faker**: Synthetic data generation
 - **pytest**: Testing framework
 
 ## 📝 API Key Setup (Optional)
 
-For full functionality with OpenAI:
+For enhanced results with OpenAI:
 
 1. Get an API key from https://platform.openai.com/
 2. Copy `.env.example` to `.env`
 3. Add your key: `OPENAI_API_KEY=sk-...`
 
-The demos work without an API key using fallback methods, but OpenAI integration provides:
-- Higher quality product descriptions
-- More accurate sentiment analysis
-- Better recommendation relevance
+The demos work without an API key using fallback methods.
 
 ## 🔧 Configuration
 
@@ -225,7 +214,7 @@ Edit `src/utils.py` to configure:
 
 - **Temperature**: Control creativity in text generation
 - **Model selection**: Choose between GPT-4, GPT-3.5, etc.
-- **Batch sizes**: Balance speed vs. cost
+- **Batch sizes**: Balance speed vs cost
 - **Caching**: Enable/disable result caching
 
 ## 📚 Further Reading
@@ -233,19 +222,18 @@ Edit `src/utils.py` to configure:
 - **Full Case Study**: See `CASE_STUDY.md` for comprehensive analysis
 - **OpenAI Documentation**: https://platform.openai.com/docs
 - **Streamlit Docs**: https://docs.streamlit.io/
-- **E-commerce AI Best Practices**: See case study Section 7
 
 ## 🤝 Contributing
 
-This is a personal learning project. While not actively seeking contributions, feel free to:
+This is a personal learning project. Feel free to:
 
 - Fork for your own learning
 - Adapt for your educational projects
 - Share feedback via issues
 
-## 📄 License
+## 📄 Licence
 
-MIT License - see `LICENSE` file for details.
+MIT Licence - see `LICENSE` file for details.
 
 ## ⚠️ Disclaimer
 
@@ -259,12 +247,8 @@ This is a personal learning project for educational purposes only. It is:
 
 All company names, products, customers, and data are entirely fictional and created specifically for this educational demonstration.
 
-## 📧 Questions?
-
-This is a learning project showcasing AI applications in e-commerce. All data is synthetic, and all results are demonstrations of capability using fictional scenarios.
-
 ---
 
-**Created**: October 2026
-**Status**: Educational demonstration
+**Created**: October 2026  
+**Status**: Educational demonstration  
 **Data**: 100% fictional

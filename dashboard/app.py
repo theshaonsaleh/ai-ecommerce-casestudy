@@ -104,7 +104,7 @@ def show_overview(data):
     st.markdown("### About This Project")
     st.write("""
     This dashboard demonstrates how AI can help online retail businesses through practical examples
-    using **Northwind Home Goods**, a fictional online retailer. Explore four key AI applications:
+    using **Cotswold Home & Living**, a fictional UK online retailer. Explore four key AI applications:
     
     - 📝 **Product Descriptions**: LLM-powered content generation
     - 💬 **Sentiment Analysis**: Review insights and theme extraction
@@ -157,7 +157,7 @@ def show_overview(data):
             fig = px.bar(
                 x=category_sales.index,
                 y=category_sales.values,
-                labels={'x': 'Category', 'y': 'Total Sales ($)'},
+                labels={'x': 'Category', 'y': 'Total Sales (£)'},
                 color=category_sales.values,
                 color_continuous_scale='Blues'
             )
@@ -171,7 +171,7 @@ def show_overview(data):
             fig = px.line(
                 x=[str(p) for p in monthly_sales.index],
                 y=monthly_sales.values,
-                labels={'x': 'Month', 'y': 'Total Sales ($)'}
+                labels={'x': 'Month', 'y': 'Total Sales (£)'}
             )
             fig.update_layout(height=400)
             st.plotly_chart(fig, use_container_width=True)
